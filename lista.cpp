@@ -35,8 +35,8 @@ void Lista::insertar(int valor){
 }
 
 void Lista::mostrar(){
-    Nodo *aux=inicio;
-    while(aux!=NULL){
+    Nodo *aux=inicio; //creamos un nuevo nodo y lo igualamos a inicio
+    while(aux!=NULL){ //recorremos la lista
         cout<<aux->valor<<" ";
         aux=aux->siguiente; // movemos el puntero al siguiente nodo
     }
@@ -69,8 +69,7 @@ void Lista::eliminar_nodo(int n){
 void Lista::buscar(int e){
     bool band=false;
 
-    Nodo *actual=new Nodo();
-    actual=inicio;
+    Nodo *actual=inicio; //creamos un nuevo nodo y se le asigna inicio
 
     while((actual!=NULL)&&(actual->valor<=e)){
         if(actual->valor==e){
